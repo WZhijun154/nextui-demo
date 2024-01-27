@@ -24,7 +24,7 @@ export const Layout = ({ children }: Props) => {
       }}
     >
       <section className="flex">
-        <SidebarWrapper />
+        {/* <SidebarWrapper /> */}
         <NavbarWrapper>{children}</NavbarWrapper>
       </section>
     </SidebarContext.Provider>
