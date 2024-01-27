@@ -48,7 +48,7 @@ export const CardTransactions = () => {
 
         <div className="flex flex-col gap-6 ">
           {items.map((item) => (
-            <div key={item.name} className="grid grid-cols-4 w-full">
+            <div key={item.name} className="grid grid-cols-4 w-full justify-items-center items-center">
               <div className="w-full">
                 <Avatar
                   isBordered

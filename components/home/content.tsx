@@ -9,7 +9,7 @@ import { CardAgents } from "./card-agents";
 import { CardTransactions } from "./card-transactions";
 import { Link } from "@nextui-org/react";
 import NextLink from "next/link";
-
+import { CardHeader, CardBody, Card, Divider } from "@nextui-org/react";
 const Chart = dynamic(
   () => import("../charts/steam").then((mod) => mod.Steam),
   {
@@ -24,7 +24,8 @@ export const Content = () => (
         {/* Card Section Top */}
         <div className="flex flex-col gap-2">
           <h3 className="text-xl font-semibold">Available Balance</h3>
-          <div className="grid md:grid-cols-2 grid-cols-1 2xl:grid-cols-3 gap-5  justify-center w-full">
+          {/* <div className="grid md:grid-cols-2 grid-cols-1 2xl:grid-cols-3 gap-5  justify-center w-full"> */}
+          <div className="flex flex-row gap-5 w-full h-full">
             <CardBalance1 />
             <CardBalance2 />
             <CardBalance3 />
@@ -41,9 +42,9 @@ export const Content = () => (
       </div>
 
       {/* Left Section */}
-      <div className="mt-4 gap-2 flex flex-col xl:max-w-md w-full">
+      <div className="mt-6 gap-2 flex flex-col xl:max-w-md w-full">
         <h3 className="text-xl font-semibold">Section</h3>
-        <div className="flex flex-col justify-center gap-4 flex-wrap md:flex-nowrap md:flex-col">
+        <div className="flex flex-col justify-center gap-6 flex-wrap md:flex-nowrap md:flex-col">
           <CardAgents />
           <CardTransactions />
         </div>
@@ -64,6 +65,23 @@ export const Content = () => (
         </Link>
       </div>
       <TableWrapper />
+    </div>
+
+    <div>
+      <Card className="max-w-[30rem] mx-auto border-none bg-background/60 dark:bg-default-100/50 sm">
+        <CardHeader>
+          <div className="text-center text-xl font-semibold">
+            Hello World
+          </div>
+        </CardHeader>
+        <Divider></Divider>
+        <CardBody>
+          <div>
+            sdjaidjpasjmfisearojfisjfioaesnhfiuanewidfjaiwdjnaiwdjawiodnaiopwdjawd
+            adanwdianwdinawidnawidnawi
+          </div>
+        </CardBody>
+      </Card>
     </div>
   </div>
 );
