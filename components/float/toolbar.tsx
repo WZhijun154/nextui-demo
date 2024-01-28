@@ -7,7 +7,11 @@ import {
   AiOutlineComment, AiOutlineBars
 } from 'react-icons/ai'; // Assuming AiOutlineBars is the grip/handle icon
 
-const IconButton = ({ Icon }) => (
+type IconButtonProps = {
+  Icon: React.ElementType;
+};
+
+const IconButton = ({ Icon } : IconButtonProps) => (
   <Button isIconOnly className='bg-white'>
     <Icon size={24} />
   </Button>
